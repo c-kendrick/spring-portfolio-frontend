@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap');
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 175px;
+}
+
+/* --- GLOBAL VARIABLES & BASE STYLES --- */
+:root {
+    --bg-color: #f4f4f9;
+    --nav-bg: #f8f9fa;
+    --ashen: #d8d9d9;
+    --text-color: #444;
+    --text-muted: #777;
+    --card-bg: white;
+    --primary-color: #0C405A;
+    --hover-color: #800000;
+    --gray-light: #e0e0e0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+/* --- GLOBAL TYPOGRAPHY & UTILITIES --- */
+.section-title {
+    font-family: "EB Garamond", serif;
+    color: var(--primary-color);
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-align: center;
+}
+
+.mini-title {
+    font-family: "Times New Roman", serif;
+}
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    will-change: opacity, transform;
+}
+
+.fade-in.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}

@@ -1,0 +1,137 @@
+/* --- PORTFOLIO WIDE CARDS --- */
+#portfolio {
+    max-width: 1000px;
+    margin: 8rem auto 4rem auto;
+    padding: 0 1rem;
+}
+
+.project-container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: var(--card-bg);
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    background-color: var(--card-bg);
+    border-radius: 8px;
+    padding: 2rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    margin-bottom: 3rem;
+    transition: transform 0.2s ease;
+}
+
+.card-content h2 {
+    margin-top: 0;
+    color: var(--primary-color);
+}
+
+.card-content p {
+    font-size: 0.95rem;
+    color: var(--text-color);
+}
+
+.card-image-wrapper img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border: 3px solid var(--primary-color);
+    border-radius: 4px;
+}
+
+.tag {
+    display: inline-block;
+    background: var(--gray-light);
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    margin-right: 0.3rem;
+    margin-bottom: 0.5rem;
+}
+
+/* --- BUTTONS --- */
+.btn {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: var(--primary-color);
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background 0.2s ease;
+}
+
+.btn:hover {
+    background-color: var(--hover-color);
+}
+
+.button-group {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.button-group .btn {
+    flex: 1;
+    text-align: center;
+    margin-top: 0;
+}
+
+.btn-mc {
+    border: 2px solid var(--primary-color);
+    border-radius: 25px;
+    padding: 8px;
+    flex: 1;
+    text-align: center;
+}
+
+.btn-mc:hover {
+    border: 2px solid var(--hover-color);
+}
+
+.text-desktop {
+    display: none;
+}
+
+.plugin-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+/* =========================================
+   PORTFOLIO CARD DESKTOP STYLES
+   ========================================= */
+@media screen and (min-width: 801px) {
+    .card {
+        flex-direction: row;
+        gap: 2rem;
+    }
+
+    .card.reverse {
+        flex-direction: row-reverse;
+    }
+
+    .card-content {
+        flex: 1.5;
+    }
+
+    .card-image-wrapper {
+        flex: 1;
+    }
+
+    .text-desktop {
+        display: inline;
+    }
+
+    .text-mobile {
+        display: none;
+    }
+}
