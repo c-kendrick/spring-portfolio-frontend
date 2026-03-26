@@ -62,12 +62,8 @@ function displayProjects(projects) {
         allProjectsHTML += projectCard;
     });
 
-    // 1. SAFER HTML INJECTION
-    // This adds the new projects without destroying your existing "Portfolio" <h2> tag
     container.insertAdjacentHTML('beforeend', allProjectsHTML);
 
-    // 2. ISOLATED OBSERVER
-    // We create a brand new observer right here to guarantee there are no scope or timing crashes
     const dynamicObserver = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
@@ -77,14 +73,12 @@ function displayProjects(projects) {
         });
     }, { threshold: 0.15, rootMargin: "0px 0px -50px 0px" });
 
-    // 3. APPLY TO NEW PROJECTS
     const newlyAddedProjects = container.querySelectorAll('.fade-in');
     newlyAddedProjects.forEach(projectElement => {
         dynamicObserver.observe(projectElement);
     });
 }
 
-// Trigger the function on page load
 loadPortfolioProjects()
 
 
